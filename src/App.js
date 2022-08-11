@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React,{useState,useEffect} from 'react'
 import './App.css';
+import Form from './components/Form/My-form';
+import Header from './components/Header/header';
+import Home from './components/Home/My-Home';
+
 
 function App() {
+  const [isLoggedin,setLoggedIn] = useState(false)
+
+  useEffect(()=>{
+    const saveLogInUser = localStorage.getItem('isLoggedin')
+    if(saveLogInUser === '1'){
+      setLoggedIn(true)
+    }
+  },[])
+
+  const loginHandler = (email,password) =>{
+    localStorage.setItem('isLoggedin','1')
+    setLoggedIn(true)
+  }
+  const logoutHandler = () =>{
+    localStorage.removeItem('isLoggedin')
+    setLoggedIn(false)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header isAuthenticated = {isLoggedin} onLogout = {logoutHandler}/>
+      {!isLoggedin &&  <Form ongetData = {loginHandler}/>}
+      {isLoggedin && <Home  />}
     </div>
   );
 }

@@ -1,0 +1,13 @@
+header{
+    height: 100px;
+    background-color: aliceblue;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 0px 10px #888888;
+}
+h1{
+    margin: 0;
+}

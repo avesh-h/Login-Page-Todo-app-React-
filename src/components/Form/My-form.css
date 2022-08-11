@@ -1,0 +1,47 @@
+.input{
+    /* background-color: aqua; */
+    padding-top: 20px;
+    
+}
+.input input{
+    margin-left: 20px;
+}
+input.email-input.invalid {
+    border-color: red;
+    background-color: #f3c9c9;
+}
+input.input_pass.invalid{
+    border-color: red;
+    background-color: rgb(223, 143, 143);
+}
+input.email-input:focus{
+    border-color: #ccc;
+    background-color: #fff;
+}
+input.input_pass:focus{
+    border-color: #ccc;
+    background-color: #fff;
+}
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.log-in-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #dfeded;
+    color: black;
+    cursor: pointer;
+}

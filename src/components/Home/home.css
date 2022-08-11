@@ -1,0 +1,15 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.home-card{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    box-shadow: 1px 0px 10px #888888;
+    border-radius: 50px;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+}
